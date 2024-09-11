@@ -4,7 +4,7 @@
     <title>Browser In A Box</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
-    <script type="module" src="x-frame-bypass.js"></script>
+    <script type="module" src="./x-frame-bypass.js"></script>
   </head>
   <body>
     <input type="text" id="url"/>
@@ -12,7 +12,7 @@
     <button id="back">Back</button>
     <button id="forward">Forward</button>
     <br/>
-    <iframe is="x-frame-bypass" id="frame" style="width:100%;height:100%" src="https://google.com"></iframe>
+    <iframe is="x-frame-bypass" id="frame" style="width:100%;height:100%" src="https://www.google.com/webhp?igu=1"></iframe>
     <script>
       $("#go").click(function () {
         $("#frame").attr("src", $("#url").val());
