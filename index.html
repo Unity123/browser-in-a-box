@@ -3,6 +3,8 @@
   <head>
     <title>Browser In A Box</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
   </head>
   <body>
     <input type="text" id="url"/>
@@ -10,10 +12,9 @@
     <button id="back">Back</button>
     <button id="forward">Forward</button>
     <br/>
-    <iframe id="frame" src="https://google.com"></iframe>
+    <iframe is="x-frame-bypass" id="frame" src="https://google.com"></iframe>
     <script>
       $("#go").click(function () {
-        alert("yippee! " + $("#url").val());
         $("#frame").attr("src", $("#url").val());
       });
     </script>
