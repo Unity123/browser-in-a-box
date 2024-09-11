@@ -13,6 +13,7 @@
     <iframe id="frame" src="https://google.com"></iframe>
     <script>
       $("#go").click(function () {
+        alert("yippee! " + $("#text").val());
         $("#frame").attr("src", $("#text").val());
       });
     </script>
